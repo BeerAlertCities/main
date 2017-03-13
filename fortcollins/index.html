@@ -14,6 +14,8 @@ body {font-family: "Raleway", Arial, sans-serif}
 </style>
 <body>
 
+<script src="CsvToTable.js"></script>
+
 <!-- !PAGE CONTENT! -->
 <div class="w3-content" style="max-width:1500px">
 
@@ -38,8 +40,13 @@ body {font-family: "Raleway", Arial, sans-serif}
     </div>
     
     <div class="w3-quarter w3-card-4 whitetext">
-      <h3>Test Table Image</h3>
-      <img src="https://images.duckduckgo.com/iu/?u=http%3A%2F%2F2.bp.blogspot.com%2F-UHA9iQMhfZo%2FVQFrKE1eR5I%2FAAAAAAAANo0%2FSWVAk7CS8mY%2Fs1600%2FFIFA%252BRankings.jpg&f=1" alt="Sandwich" style="width:100%">
+      <h3>Test CSV Conversion</h3>
+      <script>
+	      var csvtotable = new CsvToTable({
+		      csvFile: '/data/test.csv'
+	      });
+	    csvtotable.run();
+      </script>
     </div>
    
     <div class="w3-quarter w3-card-4 whitetext">
